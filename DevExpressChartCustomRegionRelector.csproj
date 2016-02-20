@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="DataPoint.cs" />
     <Compile Include="DataPointList.cs" />
+    <Compile Include="DiagramToPointHelper.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -35,11 +35,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.actionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            this.chart = new DevExpress.XtraCharts.ChartControl();
             this.dataPointBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataPointListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pointSeriesView1)).BeginInit();
@@ -72,23 +72,27 @@
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
-            // chartControl1
+            // chart
             // 
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl1.Diagram = xyDiagram1;
-            this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartControl1.Location = new System.Drawing.Point(0, 24);
-            this.chartControl1.Name = "chartControl1";
+            this.chart.Diagram = xyDiagram1;
+            this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chart.Location = new System.Drawing.Point(0, 24);
+            this.chart.Name = "chart";
             series1.ArgumentDataMember = "X";
             series1.DataSource = this.dataPointBindingSource;
             series1.Name = "Series 1";
             series1.ValueDataMembersSerializable = "Y";
             series1.View = pointSeriesView1;
-            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+            this.chart.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartControl1.Size = new System.Drawing.Size(481, 385);
-            this.chartControl1.TabIndex = 1;
+            this.chart.Size = new System.Drawing.Size(481, 385);
+            this.chart.TabIndex = 1;
+            this.chart.CustomPaint += new DevExpress.XtraCharts.CustomPaintEventHandler(this.chart_CustomPaint);
+            this.chart.MouseDown += new System.Windows.Forms.MouseEventHandler(this.chart_MouseDown);
+            this.chart.MouseMove += new System.Windows.Forms.MouseEventHandler(this.chart_MouseMove);
+            this.chart.MouseUp += new System.Windows.Forms.MouseEventHandler(this.chart_MouseUp);
             // 
             // dataPointBindingSource
             // 
@@ -103,7 +107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 409);
-            this.Controls.Add(this.chartControl1);
+            this.Controls.Add(this.chart);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
@@ -114,7 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pointSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataPointBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataPointListBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -129,7 +133,7 @@
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private System.Windows.Forms.BindingSource dataPointBindingSource;
         private System.Windows.Forms.BindingSource dataPointListBindingSource;
-        private DevExpress.XtraCharts.ChartControl chartControl1;
+        private DevExpress.XtraCharts.ChartControl chart;
     }
 }
 
