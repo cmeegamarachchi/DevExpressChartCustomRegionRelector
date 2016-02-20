@@ -1,4 +1,4 @@
-﻿namespace DevExpressChartCustomRegionRelector
+﻿namespace DevExpressChartCustomRegionSelector
 {
     partial class frmMain
     {
@@ -96,11 +96,11 @@
             // 
             // dataPointBindingSource
             // 
-            this.dataPointBindingSource.DataSource = typeof(DevExpressChartCustomRegionRelector.DataPoint);
+            this.dataPointBindingSource.DataSource = typeof(DevExpressChartCustomRegionSelector.DataPoint);
             // 
             // dataPointListBindingSource
             // 
-            this.dataPointListBindingSource.DataSource = typeof(DevExpressChartCustomRegionRelector.DataPointList);
+            this.dataPointListBindingSource.DataSource = typeof(DevExpressChartCustomRegionSelector.DataPointList);
             // 
             // frmMain
             // 

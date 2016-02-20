@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace DevExpressChartCustomRegionRelector
+namespace DevExpressChartCustomRegionSelector
 {
     public static class DiagramToPointHelper
     {

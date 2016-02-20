@@ -1,4 +1,4 @@
-﻿namespace DevExpressChartCustomRegionRelector
+﻿namespace DevExpressChartCustomRegionSelector
 {
     public class DataPoint
     {

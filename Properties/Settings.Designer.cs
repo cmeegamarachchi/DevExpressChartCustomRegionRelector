@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DevExpressChartCustomRegionRelector.Properties
+namespace DevExpressChartCustomRegionSelector.Properties
 {
 
 

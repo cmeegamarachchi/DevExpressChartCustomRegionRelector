@@ -5,7 +5,7 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using DevExpress.XtraCharts;
 
-namespace DevExpressChartCustomRegionRelector
+namespace DevExpressChartCustomRegionSelector
 {
     public partial class frmMain : Form
     {
