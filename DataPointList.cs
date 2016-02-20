@@ -6,12 +6,12 @@ namespace DevExpressChartCustomRegionSelector
 {
     public class DataPointList : List<DataPoint>
     {
-        public int MaxX
+        public DateTime MaxX
         {
             get { return this.Max(e => e.X); }
         }
 
-        public int MinX
+        public DateTime MinX
         {
             get { return this.Min(e => e.X); }
         }
@@ -34,7 +34,7 @@ namespace DevExpressChartCustomRegionSelector
 
             for (var i = 0; i < 100; i++)
             {
-                Add(new DataPoint {X = rnd.Next(0, 100), Y = rnd.Next(0, 100)});
+                Add(new DataPoint {X = new DateTime(2000, 1, 1).AddMonths(rnd.Next(0, 100)), Y = rnd.Next(0, 100)});
             }
         }
     }

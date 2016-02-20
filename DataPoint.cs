@@ -1,8 +1,10 @@
-﻿namespace DevExpressChartCustomRegionSelector
+﻿using System;
+
+namespace DevExpressChartCustomRegionSelector
 {
     public class DataPoint
     {
-        public int X { get; set; }
+        public DateTime X { get; set; }
         public int Y { get; set; }
     }
 }
