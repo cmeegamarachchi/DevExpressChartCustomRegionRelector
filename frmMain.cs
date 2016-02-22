@@ -24,8 +24,8 @@ namespace DevExpressChartCustomRegionSelector
 
         Rectangle CalculateDiagramBounds()
         {
-            Point p1 = XyDiagram.DiagramToPoint((double)XyDiagram.AxisX.VisualRange.MinValue, (double)XyDiagram.AxisY.VisualRange.MinValue).Point;
-            Point p2 = XyDiagram.DiagramToPoint((double)XyDiagram.AxisX.VisualRange.MaxValue, (double)XyDiagram.AxisY.VisualRange.MaxValue).Point;
+            Point p1 = XyDiagram.DiagramToPoint((DateTime)XyDiagram.AxisX.VisualRange.MinValue, (double)XyDiagram.AxisY.VisualRange.MinValue).Point;
+            Point p2 = XyDiagram.DiagramToPoint((DateTime)XyDiagram.AxisX.VisualRange.MaxValue, (double)XyDiagram.AxisY.VisualRange.MaxValue).Point;
             return DiagramToPointHelper.CreateRectangle(p1, p2);
         }
 
